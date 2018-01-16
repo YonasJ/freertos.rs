@@ -57,7 +57,7 @@
 #![cfg_attr(feature = "core_collections", feature(collections))]
 #![feature(fnbox)]
 
-#![cfg_attr(not(feature = "core_collections"), macro_use)]
+#[cfg_attr(feature = "default", macro_use)]
 extern crate alloc;
 
 #[cfg(feature = "core_collections")]
