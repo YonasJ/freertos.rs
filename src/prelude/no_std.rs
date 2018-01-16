@@ -15,5 +15,13 @@ pub use core::ptr;
 pub use alloc::rc::Rc;
 pub use alloc::boxed::{Box, FnBox};
 pub use alloc::arc::{Arc, Weak};
+
+#[cfg(not(feature = "core_collections"))]
 pub use alloc::vec::Vec;
+#[cfg(not(feature = "core_collections"))]
 pub use alloc::string::*;
+
+#[cfg(feature = "core_collections")]
+pub use collections::vec::Vec;
+#[cfg(feature = "core_collections")]
+pub use collections::string::*;

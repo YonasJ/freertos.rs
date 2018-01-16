@@ -12,3 +12,7 @@ Rust interface for the FreeRTOS embedded operating system.
 name = "freertos_rs"
 
 [dependencies]
+
+[features]
+default = []
+core_collections = []

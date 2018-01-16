@@ -54,11 +54,14 @@
 #![no_std]
 
 #![feature(alloc)]
+#![cfg_attr(feature = "core_collections", feature(collections))]
 #![feature(fnbox)]
 
-#[macro_use]
+#![cfg_attr(not(feature = "core_collections"), macro_use)]
 extern crate alloc;
 
+#[cfg(feature = "core_collections")]
+#[macro_use] extern crate collections;
 
 mod prelude;
 mod shim;
