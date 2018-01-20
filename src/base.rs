@@ -10,7 +10,8 @@ pub enum FreeRtosError {
     StringConversionError,
     TaskNotFound,
     InvalidQueueSize,
-    ProcessorHasShutDown
+    ProcessorHasShutDown,
+    InvalidPointer,
 }
 
 unsafe impl Send for CVoid {}

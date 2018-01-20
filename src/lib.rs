@@ -67,6 +67,7 @@ mod prelude;
 mod shim;
 
 mod base;
+mod box_queue;
 mod task;
 mod timers;
 mod queue;
@@ -90,5 +91,6 @@ pub use isr::*;
 pub use delays::*;
 pub use timers::*;
 pub use critical::*;
+pub use box_queue::*;
 
 pub use utils::shim_sanity_check;
